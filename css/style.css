@@ -196,8 +196,33 @@ input[type="tel"]::placeholder
     -moz-box-shadow: inset 0px 0px 2px 1px rgba(224,224,224,1);
     box-shadow: inset 0px 0px 2px 1px rgba(224,224,224,1);
 }
-.search-input-container button {
-
+.search-fixed {
+    float: left;
+    margin-left: 40px;
+    margin-top: 2.5px;
+    display: none;
+}
+form.search-fixed-form input {
+    background-image: url(../images/icon-search.png);
+    background-repeat: no-repeat;
+    background-position-x: 9px;
+    background-position-y: center;
+    padding-left: 33px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    width: 288px;
+}
+.search-fixed .fixed-search-btn {
+    width: 34px;
+    height: 34px;
+    box-sizing: border-box;
+    display: inline-block;
+    padding: 0;
+    margin-left: -38px;
+}
+.search-fixed .fixed-search-btn img {
+    vertical-align: baseline;
+    padding-top: 6px;
 }
 .where-search {
     margin-top: -5px;
@@ -254,6 +279,10 @@ nav.main-menu > ul.menu {
     max-width: 690px;
     position: relative;
     padding: 0 3px;
+}
+.bar_fixed nav.main-menu > ul.menu {
+    /* margin-left: 0;
+    transition: all 2s; */
 }
 nav.main-menu > ul.menu::after {
     content: '';

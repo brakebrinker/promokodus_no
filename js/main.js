@@ -19,10 +19,37 @@ jQuery(document).ready(function($) {
     });
 
     //fixed menu
+
+    var yesFixed = false;
+
     $(window).scroll(function () {
-        $('.bottom-header')[
-            ($(this).scrollTop() > 91 ? "add" : "remove") + "Class"
-            ]("bar_fixed");
+        var points = 91;
+
+        // $('.bottom-header')[
+        //     ($(this).scrollTop() > points ? "add" : "remove") + "Class"
+        //     ]("bar_fixed");
+    
+
+        if ( $(this).scrollTop() > points ) {
+
+            if (!yesFixed) {
+                $('.bottom-header').addClass('bar_fixed');
+                $(".main-menu ul.menu").animate({'margin-left':0}, 2000, function() {
+                    $('.search-fixed').fadeIn('fast');
+                });
+                yesFixed = true;
+            }
+
+        } else {
+
+            if (yesFixed) {
+                $('.bottom-header').removeClass('bar_fixed');
+                console.log("no-class");
+                $('.search-fixed').css('display','none');
+                $(".main-menu ul.menu").animate({'margin-left':'auto'}, 2000);
+                yesFixed = false;
+            }
+        }
     });
 
     // copy to clipboard
