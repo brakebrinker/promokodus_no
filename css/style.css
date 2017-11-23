@@ -518,7 +518,7 @@ button.close {
     color: #5f5f5f;
     font-size: 13.77px;
     font-weight: 400;
-    white-space: normal;
+    /* white-space: normal; */
     overflow: hidden;
     text-overflow: ellipsis;
     width: 76%;

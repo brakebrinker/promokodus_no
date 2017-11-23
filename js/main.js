@@ -61,58 +61,55 @@ jQuery(document).ready(function($) {
     }
 
     // animation more
-    var moreSwitch = true;
-    // var blockText = [];
-    // var blockHeight = '';
-    // var blockWidth = '';
-    // var linkText = '';
-    // var modalId = '';
+    var blockText = [];
+    var blockHeight = '';
+    var blockWidth = '';
+    var linkText = '';
+    var modalId = '';
+    var animationTime = 200;
 
     $('.modal').on('shown.bs.modal', function (e) {
-        var blockText = $(this).find('.modal-content-more span');
-        var blockWidth = blockText.width() + 'px';
+        blockText = $(this).find('.modal-content-more span');
+        blockWidth = blockText.width() + 'px';
         blockText.css({"width":"100%"});
-        var blockHeight = blockText.height() + 'px';
-        var linkText = $(this).find('.modal-content-more a').html();
-        var modalId = '#' + $(this).attr('id');
+        blockHeight = blockText.height() + 'px';
+        linkText = $(this).find('.modal-content-more a').html();
 
-        blockText.css({"white-space":"nowrap","height":"19px","width":blockWidth}).animate({ 
-            opacity: 1 },
-             300);
+        blockText.css({"white-space":"nowrap","height":"19px","width":blockWidth}).animate({opacity: 1 }, 300);
+    });
 
-        $('.modal-content-more').on('click', 'a', function(e) {
-            e.preventDefault();
-            console.log(modalId);
-            var thisMore = $(modalId).find('.modal-content-more');
-    
-            if (!thisMore.hasClass('active')) {
-                thisMore.addClass('active');
-                blockText.css({"width":"100%"}).animate({ 
-                    height: blockHeight },
-                        300, function() {
-                        $(this).css({"white-space":"normal"});
-                    });
-                $(this).html('Скрыть');
-                
-                moreSwitch = false;
-            } else {
-                thisMore.removeClass('active');
-                blockText.animate({ 
-                    height: 19 },
-                        300, function() {
-                        $(this).css({"white-space":"nowrap","width":blockWidth});
-                    });
-                $(this).html(linkText);
-                
-                moreSwitch = true;
-            }
-        });
+    $('.modal-content-more').on('click', 'a', function(e) {
+        e.preventDefault();
+
+        var thisMore = $(this).closest('.modal-content-more');
+
+        var thisSpan = $(this).siblings('span');
+        var thisA = $(this);
+
+        if (!thisMore.hasClass('active')) {
+            thisMore.addClass('active');
+            thisSpan.css({"width":"100%", "white-space":"normal"}).animate({ 
+                height: blockHeight },
+                animationTime, function() {
+                    $(this).css({});
+                    thisA.html('скрыть');
+            });
+        } else {
+            thisMore.removeClass('active');
+            thisSpan.animate({ 
+                height: 19 },
+                animationTime, function() {
+                    $(this).css({"white-space":"nowrap", "width":blockWidth});//,"width":blockWidth});
+                    thisA.html(linkText);
+            });
+        }
     });
 
     $('.modal').on('hidden.bs.modal', function (e) {
         blockText = $(this).find('.modal-content-more span');
-        blockText.css({"white-space":"nowrap","height":"19px","width":blockWidth,"opacity":"0"});
+        blockText.removeAttr('style');
         $(this).find('.modal-content-more').removeClass('active');
+        $(this).find('.modal-content-more a').html(linkText);
     });
     
 
