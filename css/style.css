@@ -390,8 +390,8 @@ button.close {
     font-weight: 100;
 }
 .modal-header .close {
-    margin-top: -14px;
-    margin-right: -7px;
+    margin-right: -4px;
+    margin-top: -17px;
 }
 .modal-header {
     padding: 15px;
@@ -411,6 +411,9 @@ button.close {
 
 .left-modal-header {
     padding-left: 35px;
+}
+.right-modal-header {
+    padding: 0;
 }
 .right-modal-title {
     color: #383838;
@@ -503,11 +506,15 @@ button.close {
     text-overflow: ellipsis;
     width: 73%;
 }
+.modal-content-promo .without-button input[type="text"] {
+    width: 100%;
+}
 .modal-content-more a {
     font-size: 13.77px;
     font-weight: 400;
     background: url('../images/modale-arrow-chevron-down.png') no-repeat right center;
     padding-right: 13px;
+    padding-top: 3px;
     text-align: right;
     float: right;
 }
@@ -566,6 +573,61 @@ button.close {
 .btn.btn-no {
     background: url('../images/unlike-small.png') no-repeat 9px 10px;
 }
+.modal-content-just-text {
+    color: #5f5f5f;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    padding-left: 41px;
+    padding-right: 35px;
+    margin-top: 16px;
+}
+.modal-content-just-text.without-button {
+    padding-left: 23px;
+    padding-right: 23px;
+}
+.modal-content-wrong {
+    padding: 0 71px;
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+.modal-content-wrong .wrong-item a {
+    display: block;
+    width: 76px;
+    margin: 0 auto;
+    color: #5f5f5f;
+    font-size: 14px;
+    text-align: center;
+    height: 126px;
+    padding-top: 85px;
+    text-decoration: none;
+}
+.modal-content-wrong .wrong-item.bad-condition a {
+    background: url('../images/error-condition.png') no-repeat center top;
+    transition: background .2s;
+}
+.modal-content-wrong .wrong-item.no-sale a {
+    background: url('../images/no-sale-icon.png') no-repeat center top;
+    transition: background .2s;
+}
+.modal-content-wrong .wrong-item.other a {
+    background: url('../images/other-icon.png') no-repeat center top;
+    transition: background .2s;
+}
+
+.modal-content-wrong .wrong-item.bad-condition a:hover {
+    background: url('../images/error-condition-hv.png') no-repeat center top;
+    transition: background .2s;
+}
+.modal-content-wrong .wrong-item.no-sale a:hover {
+    background: url('../images/no-sale-icon-hv.png') no-repeat center top;
+    transition: background .2s;
+}
+.modal-content-wrong .wrong-item.other a:hover {
+    background: url('../images/other-icon-hv.png') no-repeat center top;
+    transition: background .2s;
+}
+
 /* .modal-overlay {
     position: fixed;
     left: 0;
