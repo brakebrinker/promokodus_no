@@ -492,6 +492,7 @@ button.close {
 }
 .modal-footer {
     border-top: 1px solid rgba(181, 183, 196, 0.3);
+    background-color: #fff;
 }
 
 .left-modal-header {
@@ -622,8 +623,6 @@ button.close {
 .modal-content-more.active span {
     width: 100%;
     /* transition: height .3s, white-space .3s; */
-    max-height: 155px;
-    overflow: scroll;
 }
 .modal-content-more {
     margin-top: 13px;
@@ -783,18 +782,7 @@ form.problem-form .modal-content-promo-wrapper {
 @media (max-width: 767px) {
     body {
         font-size: 18px;
-    }
-    .modal-header {
-        flex-grow: 1;
-    }
-    .modal-body {
-        flex-grow: 30;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-    .modal-footer {
-        flex-grow: 1;
+/*        min-width: 1040px;*/
     }
     .logo-container {
         text-align: center;
@@ -805,7 +793,7 @@ form.problem-form .modal-content-promo-wrapper {
     }
     .modal-dialog {
         width: 100%;
-        min-width: 480px;
+/*        min-width: 480px;*/
         height: 100%;
         position: absolute;
         top: 0;
@@ -876,8 +864,10 @@ form.problem-form .modal-content-promo-wrapper {
         width: 100%;
     }
     .modal-content-more {
-        overflow: hidden;
-        max-height: 185px;
+        margin-top: 13px;
+        text-align: center;
+        padding-left: 23px;
+        padding-right: 23px;
     }
     .modal-content-more span {
         width: 100%;
@@ -985,5 +975,28 @@ form.problem-form .modal-content-promo-wrapper {
     .footer-moresales-title {
         font-size: 22px;
         font-weight: bold;
+    }
+    .modal-content-more {
+        overflow-y: scroll;
+        max-height: 185px;
+    }
+    .modal-content-more.active span {
+        max-height: 155px;
+        overflow: scroll;
+    }
+}
+
+@media (min-height: 568px) {
+    .modal-header {
+        flex-grow: 1;
+    }
+    .modal-body {
+        flex-grow: 30;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .modal-footer {
+        flex-grow: 1;
     }
 }
