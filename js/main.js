@@ -2,7 +2,7 @@ jQuery(document).ready(function($) {
     //dropdown menu
     var switchMenu = true;
 
-    $('.main-menu .dropdown').on('click', 'a', function(e) {
+    $('.main-menu').on('click', ' .dropdown > a', function(e) {
         e.preventDefault();
 
         if (switchMenu) {
@@ -24,24 +24,32 @@ jQuery(document).ready(function($) {
     var posLeft = $('.main-menu ul.menu').offset().left - $('.main-menu ul.menu').position().left;
     var menuAnimateTime = 300;
     var pixelsAction = 91;
+    var moreThanWidth = 1060;
 
-    $(window).scroll(function () {
-        if ( $(this).scrollTop() > pixelsAction ) {
-            if (!yesFixed) {
-                yesFixed = true;
-                $('.bottom-header').addClass('bar_fixed');
-                $(".main-menu ul.menu").animate({'margin-left':0}, menuAnimateTime);
-                $('.search-fixed').fadeIn('fast');
+
+        $(window).scroll(function () {
+            if ( $(this).scrollTop() > pixelsAction ) {
+                if (!yesFixed) {
+                    yesFixed = true;
+                    $('.bottom-header').addClass('bar_fixed');
+                    if ($(window).width() > moreThanWidth) {
+                        $(".main-menu ul.menu").animate({'margin-left':0}, menuAnimateTime, function() {
+                            $('.search-fixed').fadeIn(10);
+                        });
+                    }
+                }
+            } else {
+                if (yesFixed) {
+                    yesFixed = false;
+                    $('.bottom-header').removeClass('bar_fixed');
+                    if ($(window).width() > moreThanWidth) {
+                        $('.search-fixed').fadeOut(10);
+                        $(".main-menu ul.menu").animate({'margin-left':posLeft}, menuAnimateTime);
+                    }
+                }
             }
-        } else {
-            if (yesFixed) {
-                yesFixed = false;
-                $('.bottom-header').removeClass('bar_fixed');
-                $('.search-fixed').fadeOut('fast');
-                $(".main-menu ul.menu").animate({'margin-left':posLeft}, menuAnimateTime);
-            }
-        }
-    });
+        });
+
 
     // copy to clipboard
     $('.modal-content-promo-wrapper').on('click', '.copy', function(e) {
@@ -70,7 +78,7 @@ jQuery(document).ready(function($) {
         try {  
             var successful = document.execCommand('copy');  
             var msg = successful ? 'successful' : 'unsuccessful';  
-            // console.log('Copy email command was ' + msg);  
+            alert ('Вы скопировали промокод');  
         } catch(err) {  
             // console.log('Oops, unable to copy');  
         }  
@@ -115,7 +123,7 @@ jQuery(document).ready(function($) {
         } else {
             thisMore.removeClass('active');
             thisSpan.animate({ 
-                height: 19 },
+                height: 21 },
                 animationTime, function() {
                     $(this).css({"white-space":"nowrap", "width":blockWidth});//,"width":blockWidth});
                     thisA.html(linkText);

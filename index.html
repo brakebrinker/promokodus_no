@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=480, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&amp;subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
@@ -19,19 +19,21 @@
     <header>
         <div class="container-fluid">
             <div class="top-header row">
-                <div class="logo-container col-md-4">
+                <div class="logo-container col-sm-4 col-xs-12">
                     <a href="#">
                         <img src="./images/logo.png") >
                         <span>скидки на товары и услуги</span>
                     </a>
                 </div>
-                <div class="search-container col-md-8">
-                    <form id="head-search-form" action="">
-                        <div class="search-input-container">
+                <div class="search-container col-sm-8 hidden-xs">
+                    <form id="head-search-form col-sm-12" action="">
+                        <div class="search-input-container col-sm-9">
                             <input type="text" name="search" id="search" placeholder="Введите адрес сайта или его название...">
-                            <button>Найти</button>
                         </div>
-                        <div class="where-search">
+                        <div class="search-input-container-right col-sm-3">
+                            <button class="btn blue">Найти</button>
+                        </div>
+                        <div class="where-search visible-lg">
                             <div class="where-search-item">
                                 <input type="checkbox" id="where-search__item1" value="Wildberries">
                                 <label for="where-search__item1">Wildberries</label>
@@ -80,7 +82,7 @@
                     </form>
                 </div>
             </div>
-            <div class="bottom-header row">
+            <div class="bottom-header row hidden-xs">
                 <nav class="main-menu">
                     <ul class="menu">
                         <li><a href="#"><img src="./images/menu-icon-1.png"> Главная</a></li>
@@ -107,14 +109,55 @@
                         <li><a href="#"><img src="./images/menu-icon-4.png"> Вопросы и ответы</a></li>
                     </ul>
                 </nav>
+                <div class="search-fixed">
+                    <form class="search-fixed-form" action="">
+                        <input type="text" name="search" id="fixed-search" placeholder="Введите название магазина">
+                        <button class="btn blue fixed-search-btn"><img src="./images/fixed-search-icon.png" alt="icon"></button>
+                    </form>
+                </div>
             </div>
         </div>
     </header>
-    <section style="height: 1000px;background:url('./images/bg-content.jpg') no-repeat center center"></section>
-    <footer>
+    <section class="container" style="padding-top: 50px; height: 1000px;background:url('./images/bg-content.png') no-repeat center center">
+        <!-- Button trigger modal -->
+        <div class="row" style="margin: 10px 0">
+            <button type="button" class="btn btn-primary btn-lg col-md-2 col-md-offset-1" data-toggle="modal" data-target="#modal-1">
+            Launch modal 1
+            </button>
+            <button type="button" class="btn btn-primary btn-lg col-md-2" data-toggle="modal" data-target="#modal-2">
+            Launch modal 2
+            </button>
+            <button type="button" class="btn btn-primary btn-lg col-md-2" data-toggle="modal" data-target="#modal-3">
+            Launch modal 3
+            </button>
+            <button type="button" class="btn btn-primary btn-lg col-md-2" data-toggle="modal" data-target="#modal-4">
+            Launch modal 4
+            </button>
+            <button type="button" class="btn btn-primary btn-lg col-md-2" data-toggle="modal" data-target="#modal-5">
+            Launch modal 5
+            </button>
+        </div>
+        <div class="row" style="margin: 10px 0">
+            <button type="button" class="btn btn-primary btn-lg col-md-2 col-md-offset-1" data-toggle="modal" data-target="#modal-6">
+            Launch modal 6
+            </button>
+            <button type="button" class="btn btn-primary btn-lg col-md-2" data-toggle="modal" data-target="#modal-7">
+            Launch modal 7
+            </button>
+            <button type="button" class="btn btn-primary btn-lg col-md-2" data-toggle="modal" data-target="#modal-8">
+            Launch modal 8
+            </button>
+            <button type="button" class="btn btn-primary btn-lg col-md-2" data-toggle="modal" data-target="#modal-9">
+            Launch modal 9
+            </button>
+            <button type="button" class="btn btn-primary btn-lg col-md-2" data-toggle="modal" data-target="#modal-10">
+            Launch modal 10
+        </div>
+    </section>
+    <footer class="hidden-xs">
         <div class="container-fluid">
             <div class="foot-wrapper row">
-                <div class="foot-right-wrapper col-md-11">
+                <div class="foot-right-wrapper col-sm-11">
                     <div class="foot-menu-container">
                         <ul>
                             <li><a href="#">О проекте</a></li>
@@ -138,7 +181,523 @@
             </div>
         </div>
     </footer>
+      <!-- Modal -->
+    <div class="modal fade" id="modal-1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <div class="row">
+                    <div class="logo-container col-xs-12 visible-xs">
+                        <a href="#">
+                            <img src="./images/logo.png") >
+                            <span>скидки на товары и услуги</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="left-modal-header col-xs-4">
+                        <div class="modal-icon-header">
+                            <img src="./images/logo-modal.png" alt="">
+                        </div>
+                    </div>
+                    <div class="right-modal-header col-xs-7">
+                        <div class="right-modal-title">
+                                Первоклассная распродажа!<br>Скидка до 51% и кэшбэк!
+                        </div>
+                        <div class="right-modal-subtitle">Промокод действует до 31 августа 2017, 23:59</div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="modal-content-navi" data-dismiss="modal">Назад</div>
+                <div class="modal-content-title">
+                        Понравился купон?
+                </div>
+                <div class="modal-content-like">
+                    <span class="like"></span>
+                    <span class="unlike"></span>
+                </div>
+                <div class="modal-content-social hidden-xs">
+                    <div class="modal-content-social-title">Поделитесь выгодой с друзьями!</div>
+                    <div class="modal-content-social-img">
+                        <img src="./images/social-icons.png" alt="socials">
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="modal-content-social visible-xs">
+                    <div class="modal-content-social-title">Поделитесь выгодой с друзьями!</div>
+                    <div class="modal-content-social-img">
+                        <img src="./images/social-icons.png" alt="socials">
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
 
+    <div class="modal fade" id="modal-2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <div class="row">
+                        <div class="logo-container col-xs-12 visible-xs">
+                            <a href="#">
+                                <img src="./images/logo.png") >
+                                <span>скидки на товары и услуги</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="left-modal-header col-xs-4">
+                            <div class="modal-icon-header">
+                                <img src="./images/logo-modal.png" alt="">
+                            </div>
+                        </div>
+                        <div class="right-modal-header col-xs-7">
+                            <div class="right-modal-title">
+                                    Первоклассная распродажа!<br>Скидка до 51% и кэшбэк!
+                            </div>
+                            <div class="right-modal-subtitle">Промокод действует до 31 августа 2017, 23:59</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-content-goto">Перейдите на сайт <a href="#">«Ozon.ru»</a> и используйте промокод</div>
+                    <div class="modal-content-promo">
+                        <div class="push-to-copy visible-xs">Нажмите, чтобы скопировать</div>
+                        <div class="modal-content-promo-wrapper">
+                            <input type="text" name="promo-code" id="promo-2" class="yes-buffer" value="PROMOKODUS-SUPERPRIZ-SUPERPRIZ-SUPERPRIZ-SUPERPRIZ-SUPERPRIZ" readonly>
+                            <button class="btn purple copy hidden-xs">Копировать</button>
+                        </div>
+                    </div>
+                    <div class="modal-content-more">
+                        <span>Используйте промокод и получите скидку 51% и кэшбэк 20% при...</span>
+                        <a href="#">читать подробнее</a>
+                    </div>
+                    <div class="modal-content-use-code">
+                        <button class="btn green">Использовать код</button>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="modal-footer-question">
+                        <span>Купон сработал?</span>
+                        <button type="button" class="btn btn-default btn-yes">Да</button>
+                        <button type="button" class="btn btn-default btn-no">Нет</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal-3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <div class="row">
+                        <div class="logo-container col-xs-12 visible-xs">
+                            <a href="#">
+                                <img src="./images/logo.png") >
+                                <span>скидки на товары и услуги</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="left-modal-header col-xs-4">
+                            <div class="modal-icon-header">
+                                <img src="./images/logo-modal.png" alt="">
+                            </div>
+                        </div>
+                        <div class="right-modal-header col-xs-7">
+                            <div class="right-modal-title">
+                                    Первоклассная распродажа!<br>Скидка до 51% и кэшбэк!
+                            </div>
+                            <div class="right-modal-subtitle">Промокод действует до 31 августа 2017, 23:59</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-content-goto">Перейдите на сайт <a href="#">«Ozon.ru»</a> и используйте промокод</div>
+                    <div class="modal-content-promo">
+                        <div class="push-to-copy visible-xs">Нажмите, чтобы скопировать</div>
+                        <div class="modal-content-promo-wrapper">
+                            <input type="text" name="promo-code" id="promo-3" class="yes-buffer" value="PROMOKODUS-SUPERPRIZ" readonly>
+                            <button class="btn purple copy hidden-xs">Копировать</button>
+                        </div>
+                    </div>
+                    <div class="modal-content-more">
+                        <span>Используйте промокод и получите скидку 51% и кэшбэк 20% при...</span>
+                        <a href="#">читать подробнее</a>
+                    </div>
+                    <div class="modal-content-use-code">
+                        <button class="btn green">Использовать код</button>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="modal-footer-question">
+                        <span>Купон сработал?</span>
+                        <button type="button" class="btn btn-default btn-yes">Да</button>
+                        <button type="button" class="btn btn-default btn-no">Нет</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal-4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <div class="row">
+                        <div class="logo-container col-xs-12 visible-xs">
+                            <a href="#">
+                                <img src="./images/logo.png") >
+                                <span>скидки на товары и услуги</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="left-modal-header col-xs-4">
+                            <div class="modal-icon-header">
+                                <img src="./images/logo-modal.png" alt="">
+                            </div>
+                        </div>
+                        <div class="right-modal-header col-xs-7">
+                            <div class="right-modal-title">
+                                    До 3000 рублей в подарок на рекламу<br>В Google Adwords!
+                            </div>
+                            <div class="right-modal-subtitle">Промокод действует до 31 августа 2017, 23:59</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-content-goto">Перейдите на сайт <a href="#">«Ozon.ru»</a> и используйте промокод</div>
+                    <div class="modal-content-promo">
+                        <div class="push-to-copy visible-xs">Нажмите, чтобы скопировать</div>
+                        <div class="modal-content-promo-wrapper">
+                            <input type="text" name="promo-code" id="promo-4" class="yes-buffer" value="PROMOKODUS-SUPERPRIZ" readonly>
+                            <button class="btn purple copy hidden-xs">Копировать</button>
+                        </div>
+                    </div>
+                    <div class="modal-content-more">
+                        <span>Зарабатывайте бонусы и получайте подарки! За заработанные от 0 до 400 бонусов вы получите Пистолет Mateba Autorevolver - на 1 день, от 400 бонусов - Ускоритель 15% на выбор - на 1 день, от 800 бонусов - Кредитное оружие на выбор - на 1 день, от 2000 бонусов (Кредитное оружие на выбор - на 1 день и скидку на переименование персонажа - 10%, скидку на покупку подарка другу - 5%), от 4000 бонусов (Коронное оружие на выбор - 6 часов, скидку на переименование персонажа - 15%, скидку на покупку подарка другу - 5%, Увеличенный размер беспроцентного кредита - 750 кредитов, Новое оружие или снаряжение - на 1 день 10000 (Коронное оружие на выбор - на 1 день, скидку на переименование персонажа - 25%, скидку на покупку подарка другу - 10%, Увеличенный размер беспроцентного кредита - 1000 кредитов, Новое оружие или снаряжение - на 1 день. Ввод промокода для данной акции не требуется.</span>
+                        <a href="#">читать подробнее</a>
+                    </div>
+                    <div class="modal-content-use-code">
+                        <button class="btn green">Использовать код</button>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="modal-footer-question">
+                        <span>Купон сработал?</span>
+                        <button type="button" class="btn btn-default btn-yes">Да</button>
+                        <button type="button" class="btn btn-default btn-no">Нет</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal-5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <div class="row">
+                        <div class="logo-container col-xs-12 visible-xs">
+                            <a href="#">
+                                <img src="./images/logo.png") >
+                                <span>скидки на товары и услуги</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="left-modal-header col-xs-4">
+                            <div class="modal-icon-header">
+                                <img src="./images/logo-modal.png" alt="">
+                            </div>
+                        </div>
+                        <div class="right-modal-header col-xs-7">
+                            <div class="right-modal-title">
+                                    Первоклассная распродажа!<br>Скидка до 51% и кэшбэк!
+                            </div>
+                            <div class="right-modal-subtitle">Промокод действует до 31 августа 2017, 23:59</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-content-just-text">
+                        Экономьте до 51% на товарах из специального раздела и получите кэшбэк 20%
+                        при оплате картой банка «Открытие» Ввод промокода не требуется. 
+                        Подробности на странице акции.
+                    </div>
+                    <div class="modal-content-use-code">
+                        <button class="btn green">Перейти к акции</button>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="modal-footer-question">
+                        <span>Купон сработал?</span>
+                        <button type="button" class="btn btn-default btn-yes">Да</button>
+                        <button type="button" class="btn btn-default btn-no">Нет</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal-6" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <div class="row">
+                        <div class="logo-container col-xs-12 visible-xs">
+                            <a href="#">
+                                <img src="./images/logo.png") >
+                                <span>скидки на товары и услуги</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="left-modal-header col-xs-4">
+                            <div class="modal-icon-header">
+                                <img src="./images/logo-modal.png" alt="">
+                            </div>
+                        </div>
+                        <div class="right-modal-header col-xs-7">
+                            <div class="right-modal-title">
+                                    Первоклассная распродажа!<br>Скидка до 51% и кэшбэк!
+                            </div>
+                            <div class="right-modal-subtitle">Промокод действует до 31 августа 2017, 23:59</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-content-promo">
+                        <div class="modal-content-promo-wrapper without-button">
+                            <input type="text" name="promo-code" id="promo-6" value="PROMOKODUS-SUPERPRIZ" readonly>
+                        </div>
+                    </div>
+                    <div class="modal-content-just-text without-button">
+                        Закажите или продлите услуги Reg.ru и получите на электроннный адрес, указанный 
+                        в заказе, промокод на суммудо 3000 рублей для проведенния рекламной компании
+                        в Google AdWords. Подробности на странице акции.
+                    </div>
+                    <div class="modal-content-use-code">
+                        <button class="btn green">Перейти к акции</button>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="modal-footer-question">
+                        <span>Купон сработал?</span>
+                        <button type="button" class="btn btn-default btn-yes">Да</button>
+                        <button type="button" class="btn btn-default btn-no">Нет</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal-7" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <div class="row">
+                    <div class="logo-container col-xs-12 visible-xs">
+                        <a href="#">
+                            <img src="./images/logo.png") >
+                            <span>скидки на товары и услуги</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="left-modal-header col-xs-4">
+                        <div class="modal-icon-header">
+                            <img src="./images/logo-modal.png" alt="">
+                        </div>
+                    </div>
+                    <div class="right-modal-header col-xs-7">
+                        <div class="right-modal-title">
+                                Первоклассная распродажа!<br>Скидка до 51% и кэшбэк!
+                        </div>
+                        <div class="right-modal-subtitle">Промокод действует до 31 августа 2017, 23:59</div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="modal-content-navi" data-dismiss="modal">Назад</div>
+                <div class="modal-content-title">
+                        Спасибо, ваш голос принят!
+                </div>
+                <div class="modal-content-goto">Что-то пошло не так? Расскажите, и мы примем меры!</div>
+                <div class="modal-content-wrong row">
+                    <div class="wrong-item bad-condition col-xs-4"><a href="#"><span>ошибка в условие</span></a></div>
+                    <div class="wrong-item no-sale col-xs-4"><a href="#"><span>не получить скидку</span></a></div>
+                    <div class="wrong-item other col-xs-4"><a href="#"><span>другое</span></a></div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal-8" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <div class="row">
+                        <div class="logo-container col-xs-12 visible-xs">
+                            <a href="#">
+                                <img src="./images/logo.png") >
+                                <span>скидки на товары и услуги</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="left-modal-header col-xs-4">
+                            <div class="modal-icon-header">
+                                <img src="./images/logo-modal.png" alt="">
+                            </div>
+                        </div>
+                        <div class="right-modal-header col-xs-7">
+                            <div class="right-modal-title">
+                                    Первоклассная распродажа!<br>Скидка до 51% и кэшбэк!
+                            </div>
+                            <div class="right-modal-subtitle">Промокод действует до 31 августа 2017, 23:59</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-content-navi" data-dismiss="modal">Назад</div>
+                    <div class="modal-content-title">
+                            Спасибо, ваш голос принят!
+                    </div>
+                    <div class="modal-content-social">
+                        <div class="modal-content-social-title">Поделитесь выгодой с друзьями!</div>
+                        <div class="modal-content-social-img">
+                            <img src="./images/social-icons.png" alt="socials">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="modal-footer-moresales">
+                        <div class="footer-moresales-title">Хотите больше скидок? Получите их на почту <strong>БЕСПЛАТНО!</strong></div>
+                        <form class="moresales-form" action="">
+                            <div class="modal-content-promo-wrapper">
+                            <input type="text" name="name" id="moresales-name" placeholder="Введите имя">
+                            <input type="email" name="email" id="moresales-email" placeholder="Введите e-mail">
+                            <button class="btn green">Получить</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal-9" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <div class="row">
+                        <div class="logo-container col-xs-12 visible-xs">
+                            <a href="#">
+                                <img src="./images/logo.png") >
+                                <span>скидки на товары и услуги</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="left-modal-header col-xs-4">
+                            <div class="modal-icon-header">
+                                <img src="./images/logo-modal.png" alt="">
+                            </div>
+                        </div>
+                        <div class="right-modal-header col-xs-7">
+                            <div class="right-modal-title">
+                                    Первоклассная распродажа!<br>Скидка до 51% и кэшбэк!
+                            </div>
+                            <div class="right-modal-subtitle">Промокод действует до 31 августа 2017, 23:59</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-content-navi" data-dismiss="modal">Назад</div>
+                    <div class="modal-content-problem">
+                        <div class="modal-content-problem-just-text">Что-то пошло не так?</div>
+                        <form class="problem-form" action="">
+                            <div class="modal-content-promo-wrapper">
+                            <textarea name="problem" id="problem-id" cols="30" rows="10" placeholder="Опишите возникшую проблему"></textarea>
+                            </div>
+                            <div class="modal-content-use-code">
+                                <button class="btn green">Отправить</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal-10" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <div class="row">
+                        <div class="logo-container col-xs-12 visible-xs">
+                            <a href="#">
+                                <img src="./images/logo.png") >
+                                <span>скидки на товары и услуги</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="left-modal-header col-xs-4">
+                            <div class="modal-icon-header">
+                                <img src="./images/logo-modal.png" alt="">
+                            </div>
+                        </div>
+                        <div class="right-modal-header col-xs-7">
+                            <div class="right-modal-title">
+                                    Первоклассная распродажа!<br>Скидка до 51% и кэшбэк!
+                            </div>
+                            <div class="right-modal-subtitle">Промокод действует до 31 августа 2017, 23:59</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-content-navi" data-dismiss="modal">Назад</div>
+                    <div class="modal-msg-container">
+                        <div class="modal-content-title">
+                            Спасибо! Ваше обращение принято.
+                        </div>
+                        <div class="modal-content-text">
+                            Мы уже решаем проблему.
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="modal-footer-moresales">
+                        <div class="footer-moresales-title">Смотреть другие купоны:</div>
+                        <div class="footer-coupons-container row">
+                            <div class="coupon-item col-sm-3 col-xs-6"><a href="#"><img src="./images/coupon-1.jpg" alt="coupon"></a></div>
+                            <div class="coupon-item col-sm-3 col-xs-6"><a href="#"><img src="./images/coupon-2.jpg" alt="coupon"></a></div>
+                            <div class="coupon-item col-sm-3 col-xs-6"><a href="#"><img src="./images/coupon-3.jpg" alt="coupon"></a></div>
+                            <div class="coupon-item col-sm-3 col-xs-6"><a href="#"><img src="./images/coupon-4.jpg" alt="coupon"></a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
