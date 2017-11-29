@@ -52,6 +52,8 @@ jQuery(document).ready(function($) {
 
 
     // copy to clipboard
+    var allow = true;
+
     $('.modal-content-promo-wrapper').on('click', '.copy', function(e) {
         var textField = $(this).siblings('input[type="text"]');
         if (textField.hasClass('yes-buffer')) {
@@ -67,6 +69,12 @@ jQuery(document).ready(function($) {
         }
     });
 
+    $('.modal-content-promo-wrapper').on('select', 'input[type="text"]', function(e) {
+        if ($(this).hasClass('no-buffer')) {
+            window.getSelection().removeAllRanges();
+        }
+    });
+
     function copyFrom(elem) {
         window.getSelection().removeAllRanges();
         
@@ -77,8 +85,15 @@ jQuery(document).ready(function($) {
         window.getSelection().addRange(range);
         try {  
             var successful = document.execCommand('copy');  
-            var msg = successful ? 'successful' : 'unsuccessful';  
-            alert ('Вы скопировали промокод');  
+            var msg = successful ? 'successful' : 'unsuccessful'; 
+            var thisButton = $(elem).siblings('.copy');
+
+            if (allow) {
+            thisButton.addClass('copied');
+            allow = false;
+            window.setTimeout(function() { thisButton.removeClass('copied'); allow = true}, 2000);
+            //alert('copy');
+            }
         } catch(err) {  
             // console.log('Oops, unable to copy');  
         }  

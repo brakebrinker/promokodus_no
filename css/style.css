@@ -418,8 +418,141 @@ nav.main-menu > ul > li > ul > li a:hover {
 }
 nav.main-menu > ul > li > ul > li span {
     display: inline-block;
+    vertical-align: middle;
     width: 52px;
+    height: 35px;
     padding-right: 17px;
+}
+.submenu-item-1 {
+    background: url(../images/menu-split.png) no-repeat -18px -15px;
+}
+.submenu-item-2 {
+    background: url(../images/menu-split.png) no-repeat -128px -15px;
+}
+.submenu-item-3 {
+    background: url(../images/menu-split.png) no-repeat -239px -15px;
+}
+.submenu-item-4 {
+    background: url(../images/menu-split.png) no-repeat -18px -64px;
+}
+.submenu-item-5 {
+    background: url(../images/menu-split.png) no-repeat -128px -64px;
+}
+.submenu-item-6 {
+    background: url(../images/menu-split.png) no-repeat -239px -64px;
+}
+.submenu-item-7 {
+    background: url(../images/menu-split.png) no-repeat -18px -114px;
+}
+.submenu-item-8 {
+    background: url(../images/menu-split.png) no-repeat -128px -114px;
+}
+.submenu-item-9 {
+    background: url(../images/menu-split.png) no-repeat -239px -114px;
+}
+.submenu-item-10 {
+    background: url(../images/menu-split.png) no-repeat -18px -164px;
+}
+.submenu-item-11 {
+    background: url(../images/menu-split.png) no-repeat -128px -164px;
+}
+.submenu-item-12 {
+    background: url(../images/menu-split.png) no-repeat -239px -164px;
+}
+.submenu-item-13 {
+    background: url(../images/menu-split.png) no-repeat -18px -214px;
+}
+.submenu-item-14 {
+    background: url(../images/menu-split.png) no-repeat -128px -214px;
+}
+.submenu-item-15 {
+    background: url(../images/menu-split.png) no-repeat -239px -214px;
+}
+nav.main-menu > ul > li > ul > li a:hover .submenu-item-1 {
+    background: url(../images/menu-split.png) no-repeat -70px -16px;
+}
+nav.main-menu > ul > li > ul > li a:hover .submenu-item-2 {
+    background: url(../images/menu-split.png) no-repeat -181px -15px;
+}
+nav.main-menu > ul > li > ul > li a:hover .submenu-item-3 {
+    background: url(../images/menu-split.png) no-repeat -291px -15px;
+}
+nav.main-menu > ul > li > ul > li a:hover .submenu-item-4 {
+    background: url(../images/menu-split.png) no-repeat -70px -65px;
+}
+nav.main-menu > ul > li > ul > li a:hover .submenu-item-5 {
+    background: url(../images/menu-split.png) no-repeat -181px -64px;
+}
+nav.main-menu > ul > li > ul > li a:hover .submenu-item-6 {
+    background: url(../images/menu-split.png) no-repeat -291px -64px;
+}
+nav.main-menu > ul > li > ul > li a:hover .submenu-item-7 {
+    background: url(../images/menu-split.png) no-repeat -70px -115px;
+}
+nav.main-menu > ul > li > ul > li a:hover .submenu-item-8 {
+    background: url(../images/menu-split.png) no-repeat -181px -114px;
+}
+nav.main-menu > ul > li > ul > li a:hover .submenu-item-9 {
+    background: url(../images/menu-split.png) no-repeat -291px -114px;
+}
+nav.main-menu > ul > li > ul > li a:hover .submenu-item-10 {
+    background: url(../images/menu-split.png) no-repeat -70px -165px;
+}
+nav.main-menu > ul > li > ul > li a:hover .submenu-item-11 {
+    background: url(../images/menu-split.png) no-repeat -181px -164px;
+}
+nav.main-menu > ul > li > ul > li a:hover .submenu-item-12 {
+    background: url(../images/menu-split.png) no-repeat -291px -164px;
+}
+nav.main-menu > ul > li > ul > li a:hover .submenu-item-13 {
+    background: url(../images/menu-split.png) no-repeat -70px -215px;
+}
+nav.main-menu > ul > li > ul > li a:hover .submenu-item-14 {
+    background: url(../images/menu-split.png) no-repeat -181px -214px;
+}
+nav.main-menu > ul > li > ul > li a:hover .submenu-item-15 {
+    background: url(../images/menu-split.png) no-repeat -291px -214px;
+}
+.copy {
+    padding: 5px 0;
+    float: right;
+    height: 34px;
+    overflow: hidden;
+}
+button.copy span {
+    display: block;
+    position: relative;
+    -webkit-transition: -webkit-transform 300ms;
+    -moz-transition: -moz-transform 300ms;
+    -o-transition: -o-transform 300ms;
+    transition: -webkit-transform 300ms, -moz-transform 300ms, -o-transform 300ms, transform 300ms;
+}
+button.copy.copied span:first-child {
+    -webkit-transform: translateY(200%);
+    -moz-transform: translateY(200%);
+    -o-transform: translateY(200%);
+    -ms-transform: translateY(200%);
+    transform: translateY(200%);
+}
+button.copy span:last-child {
+    -webkit-transform: translateY(-300%);
+    -moz-transform: translateY(-300%);
+    -o-transform: translateY(-300%);
+    -ms-transform: translateY(-300%);
+    transform: translateY(-300%);
+}
+button.copy.copied span:last-child {
+    -webkit-transform: translateY(-100%);
+    -moz-transform: translateY(-100%);
+    -o-transform: translateY(-100%);
+    -ms-transform: translateY(-100%);
+    transform: translateY(-100%);
+}
+.coupon-item a {
+    opacity: 1;
+}
+.coupon-item a:hover {
+    opacity: .7;
 }
 
 /* footer */
@@ -600,7 +733,7 @@ button.close {
     font-weight: 400;
     background: url('../images/modale-arrow-chevron-down.png') no-repeat right center;
     padding-right: 13px;
-    padding-top: 3px;
+    padding-top: 0px;
     text-align: right;
     float: right;
 }
@@ -616,7 +749,6 @@ button.close {
     text-overflow: ellipsis;
     width: 76%;
     display: inline-block;
-    vertical-align: bottom;
     text-align: left;
     opacity: 0;
 }
@@ -626,7 +758,7 @@ button.close {
 }
 .modal-content-more {
     margin-top: 13px;
-    text-align: center;
+    text-align: left;
     padding-left: 23px;
     padding-right: 23px;
 }
@@ -689,29 +821,23 @@ button.close {
     text-decoration: none;
 }
 .modal-content-wrong .wrong-item.bad-condition a {
-    background: url('../images/error-condition.png') no-repeat center top;
-    transition: background .2s;
+    background: url('../images/modal-sprite.png') no-repeat 0 0;
 }
 .modal-content-wrong .wrong-item.no-sale a {
-    background: url('../images/no-sale-icon.png') no-repeat center top;
-    transition: background .2s;
+    background: url(../images/modal-sprite.png) no-repeat -180px 0;
 }
 .modal-content-wrong .wrong-item.other a {
-    background: url('../images/other-icon.png') no-repeat center top;
-    transition: background .2s;
+    background: url('../images/modal-sprite.png') no-repeat -360px 0;
 }
 
 .modal-content-wrong .wrong-item.bad-condition a:hover {
-    background: url('../images/error-condition-hv.png') no-repeat center top;
-    transition: background .2s;
+    background: url('../images/modal-sprite.png') no-repeat -90px 0;
 }
 .modal-content-wrong .wrong-item.no-sale a:hover {
-    background: url('../images/no-sale-icon-hv.png') no-repeat center top;
-    transition: background .2s;
+    background: url('../images/modal-sprite.png') no-repeat -270px 0;
 }
 .modal-content-wrong .wrong-item.other a:hover {
-    background: url('../images/other-icon-hv.png') no-repeat center top;
-    transition: background .2s;
+    background: url('../images/modal-sprite.png') no-repeat -450px 0;
 }
 .modal-footer-moresales {
     padding: 0 28px;
@@ -771,6 +897,24 @@ form.problem-form .modal-content-promo-wrapper {
 }
 .modal-header .close {
     opacity: 1;
+}
+.modal {
+  text-align: center;
+  padding: 0!important;
+}
+
+.modal:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -4px;
+}
+
+.modal-dialog {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
 }
 
 /*media*/
@@ -937,7 +1081,7 @@ form.problem-form .modal-content-promo-wrapper {
         margin: 0 auto;
     }
     form.moresales-form {
-        max-width: 300px;
+        max-width: 100%;
         margin: 0 auto;
     }
     form.moresales-form input {
