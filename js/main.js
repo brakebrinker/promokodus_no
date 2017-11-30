@@ -19,7 +19,6 @@ jQuery(document).ready(function($) {
     });
 
     //fixed menu animate
-
     var yesFixed = false;
     //var posLeft = $('.main-menu ul.menu').offset().left - $('.main-menu ul.menu').position().left;
     var menuAnimateTime = 300;
