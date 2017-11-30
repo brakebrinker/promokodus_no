@@ -7,19 +7,31 @@ jQuery(document).ready(function($) {
 
         if (switchMenu) {
             $(this).closest('.dropdown').find('ul').fadeIn('fast', function(){
+                // $('.main-menu').css('overflow', 'visible');
                 $(this).closest('.dropdown').addClass('active');
                 switchMenu = false;
             });
         } else {
             $(this).closest('.dropdown').find('ul').fadeOut('fast', function(){
+                // $('.main-menu').css('overflow', 'hidden');
                 $(this).closest('.dropdown').removeClass('active');
                 switchMenu = true;
             });
         }
     });
 
-    //fixed menu animate
+    $(document).mouseup(function (e) {
+        var dropli = $(".dropdown.active");
+        var dropmenu = dropli.find("ul");
+        if (dropmenu.has(e.target).length === 0){
+            dropmenu.fadeOut('fast', function(){
+                dropli.removeClass('active');
+                switchMenu = true;
+            });
+        }
+    });
 
+    //fixed menu animate
     var yesFixed = false;
     //var posLeft = $('.main-menu ul.menu').offset().left - $('.main-menu ul.menu').position().left;
     var menuAnimateTime = 300;
