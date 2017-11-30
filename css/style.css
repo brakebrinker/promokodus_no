@@ -192,6 +192,7 @@ input[type="tel"]::placeholder
 .search-input-container-right .btn.blue {
     width: 100%;
     padding: 5px 0;
+    height: 33px;
     text-align: center;
 }
 .search-input-container input {
@@ -206,6 +207,7 @@ input[type="tel"]::placeholder
     font-size: 16px;
     color: rgba(83, 83, 82, 0.68);
     padding: 6px 0 6px 33px;
+    height: 33px;
     width: 100%;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -288,15 +290,14 @@ form.search-fixed-form input {
     transition: all 2.2s;
 }
 nav.main-menu > ul.menu {
-    /* background: #8e09c6; */
-    list-style: none;
-    padding: 0;
-    display: block;
-    margin: 0 auto;
-    max-width: 690px;
     position: relative;
-    padding: 0 3px;
+    float: left;
+    left: 50%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
+
 .bar_fixed nav.main-menu > ul.menu {
     /* margin-left: 0;
     transition: all 2s; */
@@ -304,7 +305,7 @@ nav.main-menu > ul.menu {
 nav.main-menu > ul.menu::after {
     content: '';
     position: absolute;
-    right: 3px;
+    right: 50%;
     top: 0px;
     border: 14px solid transparent;
     border-right: 7px solid #AB60CB;
@@ -314,7 +315,7 @@ nav.main-menu > ul.menu::after {
 nav.main-menu > ul.menu::before {
     content: '';
     position: absolute;
-    left: 2px;
+    left: -50.1%;
     top: 0;
     border: 14px solid transparent;
     border-left: 8px solid #ab60cb;
@@ -322,10 +323,12 @@ nav.main-menu > ul.menu::before {
     z-index: 101;
 }
 nav.main-menu > ul > li {
-    float: left;
     margin: 0px 0px;
     padding: 0 11px;
     background: #8e09c6;
+    position: relative;
+    float: left;
+    right: 50%;
 }
 nav.main-menu > ul > li:first-child {
     padding-left: 22px;
@@ -704,7 +707,7 @@ button.close {
     border-radius: 4px;
     background-color: rgba(241, 243, 245, 0.7);
     box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.2);
-    padding: 3px;
+    padding: 3px 2px;
 }
 .modal-content-promo {
     padding: 0 23px;
@@ -714,7 +717,8 @@ button.close {
     color: #000;
     font-size: 20px;
     font-weight: 700;
-    padding: 4px 0 0 13px;
+    padding: 2px 0 0 13px;
+    height: 34px;
     border-radius: 4px;
     border-style: solid;
     border-width: 1px;
@@ -894,6 +898,8 @@ form.problem-form .modal-content-promo-wrapper {
 .coupon-item img {
     width: 100%;
     border: 1px solid #f1f1f1;
+    margin: 0 auto;
+    display: block;
 }
 .modal-header .close {
     opacity: 1;
@@ -915,6 +921,35 @@ form.problem-form .modal-content-promo-wrapper {
   display: inline-block;
   text-align: left;
   vertical-align: middle;
+}
+
+.group {
+    float: left;
+    padding: 0 2px;
+    box-sizing: border-box;
+}
+.group.inp-promo {
+    width: 76%;
+}
+.group.subm-promo {
+    width: 24%;
+}
+.group.inp-text {
+    width: 37%;
+}
+.group.subm-btn {
+    width:  26%;
+}
+.moresales-form input[type="text"], 
+.moresales-form input[type="email"], 
+.moresales-form input[type="tel"],
+.moresales-form button.green,
+.inp-promo input[type="text"], 
+.inp-promo input[type="email"], 
+.inp-promo input[type="tel"],
+.subm-promo button {
+    width: 100%;
+    height: 34px;
 }
 
 /*media*/
@@ -1027,6 +1062,18 @@ form.problem-form .modal-content-promo-wrapper {
         font-size: 18px;
         text-align: center;
     }
+    .group.subm-btn,
+    .group.inp-text,
+    .group.inp-promo {
+        clear: both;
+        width: 100%;
+    }
+    .group.subm-btn button {
+        width: 70%;
+    }
+    .moresales-form button.green {
+        height: 51px;
+    }
     .btn.green {
         color: #ffffff;
         outline: 0;
@@ -1116,12 +1163,16 @@ form.problem-form .modal-content-promo-wrapper {
     form.problem-form button {
         width: 250px;
     }
+    .coupon-item img {
+        max-width: 143px;
+        margin-bottom: 15px;
+    }
     .footer-moresales-title {
         font-size: 22px;
         font-weight: bold;
     }
     .modal-content-more {
-        overflow-y: scroll;
+        overflow: hidden;
         max-height: 185px;
     }
     .modal-content-more.active span {

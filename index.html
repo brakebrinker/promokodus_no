@@ -221,7 +221,9 @@
                 <div class="modal-content-social hidden-xs">
                     <div class="modal-content-social-title">Поделитесь выгодой с друзьями!</div>
                     <div class="modal-content-social-img">
-                        <img src="./images/social-icons.png" alt="socials">
+                        <script src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+                        <script src="//yastatic.net/share2/share.js"></script>
+                        <div class="ya-share2" data-services="vkontakte,facebook,odnoklassniki,moimir" data-counter=""></div>
                     </div>
                 </div>
             </div>
@@ -229,7 +231,9 @@
                 <div class="modal-content-social visible-xs">
                     <div class="modal-content-social-title">Поделитесь выгодой с друзьями!</div>
                     <div class="modal-content-social-img">
-                        <img src="./images/social-icons.png" alt="socials">
+                        <script src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+                        <script src="//yastatic.net/share2/share.js"></script>
+                        <div class="ya-share2" data-services="vkontakte,facebook,odnoklassniki,moimir" data-counter=""></div>
                     </div>
                 </div>
             </div>
@@ -269,8 +273,12 @@
                     <div class="modal-content-promo row">
                         <div class="push-to-copy visible-xs">Нажмите, чтобы скопировать</div>
                         <div class="modal-content-promo-wrapper col-sm-12">
-                            <input type="text" name="promo-code" id="promo-2" class="yes-buffer col-sm-9" value="PROMOKODUS-SUPERPRIZ-SUPERPRIZ-SUPERPRIZ-SUPERPRIZ-SUPERPRIZ" readonly>
-                            <button class="btn purple copy hidden-xs col-sm-3"><span>Копировать</span><span>Скопировано</span></button>
+                            <div class="group inp-promo">
+                                <input type="text" name="promo-code" id="promo-2" class="yes-buffer col-sm-9" value="PROMOKODUS-SUPERPRIZ-SUPERPRIZ-SUPERPRIZ-SUPERPRIZ-SUPERPRIZ" readonly>
+                            </div>
+                            <div class="group subm-promo">
+                                <button class="btn purple copy hidden-xs col-sm-3"><span>Копировать</span><span>Скопировано</span></button>
+                            </div>
                         </div>
                     </div>
                     <div class="modal-content-more">
@@ -324,8 +332,12 @@
                     <div class="modal-content-promo row">
                         <div class="push-to-copy visible-xs">Нажмите, чтобы скопировать</div>
                         <div class="modal-content-promo-wrapper col-sm-12">
-                            <input type="text" name="promo-code" id="promo-3" class="yes-buffer col-sm-9" value="PROMOKODUS-SUPERPRIZ" readonly>
-                            <button class="btn purple copy hidden-xs col-sm-3"><span>Копировать</span><span>Скопировано</span></button>
+                            <div class="group inp-promo">
+                                <input type="text" name="promo-code" id="promo-3" class="yes-buffer col-sm-9" value="PROMOKODUS-SUPERPRIZ" readonly>
+                            </div>
+                            <div class="group subm-promo">
+                                <button class="btn purple copy hidden-xs col-sm-3"><span>Копировать</span><span>Скопировано</span></button>
+                            </div>
                         </div>
                     </div>
                     <div class="modal-content-more">
@@ -379,8 +391,12 @@
                     <div class="modal-content-promo row">
                         <div class="push-to-copy visible-xs">Нажмите, чтобы скопировать</div>
                         <div class="modal-content-promo-wrapper col-sm-12">
-                            <input type="text" name="promo-code" id="promo-4" class="yes-buffer col-sm-9" value="PROMOKODUS-SUPERPRIZ" readonly>
-                            <button class="btn purple copy hidden-xs col-sm-3"><span>Копировать</span><span>Скопировано</span></button>
+                            <div class="group inp-promo">
+                                <input type="text" name="promo-code" id="promo-4" class="yes-buffer col-sm-9" value="PROMOKODUS-SUPERPRIZ" readonly>
+                            </div>
+                            <div class="group subm-promo">
+                                <button class="btn purple copy hidden-xs col-sm-3"><span>Копировать</span><span>Скопировано</span></button>
+                            </div>
                         </div>
                     </div>
                     <div class="modal-content-more">
@@ -581,7 +597,6 @@
                     <div class="modal-content-social">
                         <div class="modal-content-social-title">Поделитесь выгодой с друзьями!</div>
                         <div class="modal-content-social-img">
-                            <!-- <img src="./images/social-icons.png" alt="socials"> -->
                             <script src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
                             <script src="//yastatic.net/share2/share.js"></script>
                             <div class="ya-share2" data-services="vkontakte,facebook,odnoklassniki,moimir" data-counter=""></div>
@@ -589,13 +604,19 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <div class="modal-footer-moresales">
+                    <div class="modal-footer-moresales row">
                         <div class="footer-moresales-title">Хотите больше скидок? Получите их на почту <strong>БЕСПЛАТНО!</strong></div>
                         <form class="moresales-form" action="">
-                            <div class="modal-content-promo-wrapper">
-                            <input type="text" name="name" id="moresales-name" placeholder="Введите имя">
-                            <input type="email" name="email" id="moresales-email" placeholder="Введите e-mail">
-                            <button class="btn green">Получить</button>
+                            <div class="modal-content-promo-wrapper col-sm-12">
+                                <div class="group inp-text"> 
+                                    <input type="text" name="name" id="moresales-name" placeholder="Введите имя">
+                                </div>
+                                <div class="group inp-text"> 
+                                    <input type="email" name="email" id="moresales-email" placeholder="Введите e-mail">
+                                </div>
+                                <div class="group subm-btn"> 
+                                    <button class="btn green">Получить</button>
+                                </div>
                             </div>
                         </form>
                     </div>

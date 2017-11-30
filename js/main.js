@@ -21,7 +21,7 @@ jQuery(document).ready(function($) {
     //fixed menu animate
 
     var yesFixed = false;
-    var posLeft = $('.main-menu ul.menu').offset().left - $('.main-menu ul.menu').position().left;
+    //var posLeft = $('.main-menu ul.menu').offset().left - $('.main-menu ul.menu').position().left;
     var menuAnimateTime = 300;
     var pixelsAction = 91;
     var moreThanWidth = 1060;
@@ -33,7 +33,7 @@ jQuery(document).ready(function($) {
                     yesFixed = true;
                     $('.bottom-header').addClass('bar_fixed');
                     if ($(window).width() > moreThanWidth) {
-                        $(".main-menu ul.menu").animate({'margin-left':0}, menuAnimateTime, function() {
+                        $(".main-menu ul.menu").animate({'left':'25%'}, menuAnimateTime, function() {
                             $('.search-fixed').fadeIn(10);
                         });
                     }
@@ -44,7 +44,7 @@ jQuery(document).ready(function($) {
                     $('.bottom-header').removeClass('bar_fixed');
                     if ($(window).width() > moreThanWidth) {
                         $('.search-fixed').fadeOut(10);
-                        $(".main-menu ul.menu").animate({'margin-left':posLeft}, menuAnimateTime);
+                        $(".main-menu ul.menu").animate({'left':'50%'}, menuAnimateTime);
                     }
                 }
             }
@@ -55,10 +55,11 @@ jQuery(document).ready(function($) {
     var allow = true;
 
     $('.modal-content-promo-wrapper').on('click', '.copy', function(e) {
-        var textField = $(this).siblings('input[type="text"]');
+        var textField = $(this).closest('.modal-content-promo-wrapper').find('input[type="text"]');
         if (textField.hasClass('yes-buffer')) {
             var copyElem = '#' + textField.attr('id');
             copyFrom(copyElem);
+            console.log(copyElem);
         }
     });
 
@@ -86,7 +87,7 @@ jQuery(document).ready(function($) {
         try {  
             var successful = document.execCommand('copy');  
             var msg = successful ? 'successful' : 'unsuccessful'; 
-            var thisButton = $(elem).siblings('.copy');
+            var thisButton = $(elem).closest('.modal-content-promo-wrapper').find('.copy');
 
             if (allow) {
             thisButton.addClass('copied');
@@ -116,7 +117,7 @@ jQuery(document).ready(function($) {
         blockHeight = blockText.height() + 'px';
         linkText = $(this).find('.modal-content-more a').html();
 
-        blockText.css({"white-space":"nowrap","height":"19px","width":blockWidth}).animate({opacity: 1 }, 300);
+        blockText.css({"white-space":"nowrap","height":"22px","width":blockWidth}).animate({opacity: 1 }, 300);
     });
 
     $('.modal-content-more').on('click', 'a', function(e) {

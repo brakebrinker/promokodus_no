@@ -1,0 +1,23 @@
+body {
+	background-color: red;
+}
+nav.main-menu > ul.menu {
+    /* background: #8e09c6; */
+    list-style: none;
+    padding: 0;
+    display: block;
+    margin: 0 auto;
+    max-width: 700px;
+    position: relative;
+    padding: 0 3px;
+}
+nav.main-menu > ul.menu::after {
+    content: '';
+    position: absolute;
+    right: 11px;
+    top: 0px;
+    border: 14px solid transparent;
+    border-right: 7px solid #AB60CB;
+    border-bottom: 26px solid #ab60cb;
+    z-index: 100;
+}
