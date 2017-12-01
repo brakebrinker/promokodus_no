@@ -289,27 +289,25 @@ form.search-fixed-form input {
     width: 100%;
     transition: all 2.2s;
 }
-nav.main-menu {
-    overflow: hidden;
-}
 nav.main-menu > ul.menu {
     position: relative;
-    float: left;
-    left: 50%;
     list-style: none;
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
+    display: block;
+    /*height: 40px;*/
+    background: #ab60cb;
+    width: 700px;
 }
 
 .bar_fixed nav.main-menu > ul.menu {
     /* margin-left: 0;
     transition: all 2s; */
 }
-nav.main-menu > ul.menu::after {
+/*nav.main-menu > ul.menu::after {
     content: '';
     position: absolute;
-    right: 50%;
-    top: 0px;
+    right: 1px;
     border: 14px solid transparent;
     border-right: 7px solid #AB60CB;
     border-bottom: 26px solid #ab60cb;
@@ -318,23 +316,25 @@ nav.main-menu > ul.menu::after {
 nav.main-menu > ul.menu::before {
     content: '';
     position: absolute;
-    left: -50.1%;
-    top: 0;
+    left: -1px;
     border: 14px solid transparent;
     border-left: 8px solid #ab60cb;
     border-top: 26px solid #ab60cb;
     z-index: 101;
-}
+}*/
 nav.main-menu > ul > li {
     margin: 0px 0px;
     padding: 0 11px;
-    background: #8e09c6;
-    position: relative;
+    background: transparent;
+    /*position: relative;*/
     float: left;
-    right: 50%;
+    /*right: 50%;*/
 }
 nav.main-menu > ul > li:first-child {
     padding-left: 22px;
+    background-image: url(../images/menu-spoler.png);
+    background-position: 0 0;
+    background-repeat: no-repeat;
 }
 nav.main-menu > ul > li:last-child {
     padding-right: 22px;
@@ -382,6 +382,7 @@ nav.main-menu ul.menu > li > a::after {
     border-left: 7px solid #ab60cb;
     border-top: 26px solid #ab60cb;
     z-index: 101;
+    background: url(../images/menu-spoler.png) no-repeat -7px -26px;
 }
 /* ul.menu li:hover a::after {
     border-color:  #a8cc32;
@@ -620,9 +621,13 @@ button.close {
     margin-right: -4px;
     margin-top: -17px;
 }
+.modal-content {
+    background-color: #f1f3f5;
+}
 .modal-header {
     padding: 15px;
     border-bottom: 1px solid rgba(181, 183, 196, 0.3);
+    background-color: #fff;
 }
 .modal-body {
     background-color: #f1f3f5;
@@ -1188,7 +1193,7 @@ form.problem-form .modal-content-promo-wrapper {
 }
 @media (max-width: 479px) {
     body {
-        width: 479px;
+        width: 480px;
     }
 }
 
