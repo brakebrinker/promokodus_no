@@ -610,6 +610,10 @@ footer {
 }
 
 /* modals */
+#modal-1 .modal-footer, #modal-7 .modal-footer, #modal-9 .modal-footer {
+    background-color: #f1f3f5;
+    border: none;
+}
 .modal-content {
     border-radius: 4px;
 }
@@ -628,6 +632,7 @@ button.close {
     padding: 15px;
     border-bottom: 1px solid rgba(181, 183, 196, 0.3);
     background-color: #fff;
+    border-radius: 4px 4px 0 0;
 }
 .modal-body {
     background-color: #f1f3f5;
@@ -640,6 +645,7 @@ button.close {
 .modal-footer {
     border-top: 1px solid rgba(181, 183, 196, 0.3);
     background-color: #fff;
+    border-radius: 0 0 4px 4px;
 }
 
 .left-modal-header {
@@ -888,6 +894,7 @@ form.problem-form textarea {
     display: block;
     padding-left: 13px;
     padding-top: 5px;
+    resize: none;
 }
 form.problem-form .modal-content-promo-wrapper {
     margin-top: 10px;
@@ -983,6 +990,10 @@ height: 22px;
     .logo-container span {
         font-size: 8px;
         color: #333;
+    }
+    #modal-1 .modal-footer {
+        background-color: #fff;
+        border-top: 1px solid rgba(181, 183, 196, 0.3);
     }
     .modal-dialog {
         width: 100%;
