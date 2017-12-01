@@ -962,7 +962,10 @@ form.problem-form .modal-content-promo-wrapper {
     width: 100%;
     height: 34px;
 }
-
+/*.modal-content-more {
+overflow: hidden; 
+height: 22px;
+}*/
 /*media*/
 @media (max-width: 992px) {
     .logo-container span {

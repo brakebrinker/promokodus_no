@@ -120,6 +120,10 @@ jQuery(document).ready(function($) {
     var modalId = '';
     var animationTime = 200;
 
+    $('.modal').on('show.bs.modal', function (e) {
+        $('.modal-content-more').css({"overflow":"hidden","height":"22px"});
+    });
+
     $('.modal').on('shown.bs.modal', function (e) {
         blockText = $(this).find('.modal-content-more span');
         blockWidth = blockText.width() + 'px';
@@ -128,6 +132,8 @@ jQuery(document).ready(function($) {
         linkText = $(this).find('.modal-content-more a').html();
 
         blockText.css({"white-space":"nowrap","height":"22px","width":blockWidth}).animate({opacity: 1 }, 300);
+
+        $('.modal-content-more').css({"overflow":"visible","height":"auto"});
     });
 
     $('.modal-content-more').on('click', 'a', function(e) {
