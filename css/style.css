@@ -694,16 +694,16 @@ button.close {
     cursor: pointer;
 }
 .modal-content-like span.like {
-    background: url('../images/like-icon-uns.png') no-repeat center top;
+    background: url('../images/like-sprite-icon.png') no-repeat center top;
 }
 .modal-content-like span.unlike {
-    background: url('../images/unlike-icon-uns.png') no-repeat center bottom;
+    background: url('../images/unlike-sprite-icon.png') no-repeat center 19px;
 }
 .modal-content-like span.like:hover {
-    background: url('../images/like-icon.png') no-repeat center top;
+    background: url('../images/like-sprite-icon.png') no-repeat center -80px;
 }
 .modal-content-like span.unlike:hover {
-    background: url('../images/unlike-icon.png') no-repeat center bottom;
+    background: url('../images/unlike-sprite-icon.png') no-repeat center -61px;
 }
 .modal-content-social {
     text-align: center;
@@ -748,6 +748,21 @@ button.close {
 }
 .modal-content-promo .without-button input[type="text"] {
     width: 100%;
+}
+.modal-content-promo .without-button .inner-promo-text {
+    color: #383838;
+    font-size: 18px;
+    font-weight: 700;
+    background: #fff;
+    text-align: center;
+    border-radius: 4px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #e1e3e5;
+    padding: 3.5px 13px;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
 }
 .modal-content-more a {
     font-size: 13.77px;
@@ -807,10 +822,16 @@ button.close {
     outline: 0;
 }
 .btn.btn-yes {
-    background: url('../images/like-small.png') no-repeat 9px 5px;
+    background: url('../images/like-small-sprite.png') no-repeat 9px 5px;
 }
 .btn.btn-no {
-    background: url('../images/unlike-small.png') no-repeat 9px 10px;
+    background: url('../images/unlike-small-sprite.png') no-repeat 9px 10px;
+}
+.btn.btn-yes:hover {
+    background: url('../images/like-small-sprite.png') no-repeat 9px -34px;
+}
+.btn.btn-no:hover {
+    background: url('../images/unlike-small-sprite.png') no-repeat 9px -29px;
 }
 .modal-content-just-text {
     color: #5f5f5f;

@@ -80,12 +80,6 @@ jQuery(document).ready(function($) {
         }
     });
 
-    $('.modal-content-promo-wrapper').on('select', 'input[type="text"]', function(e) {
-        if ($(this).hasClass('no-buffer')) {
-            window.getSelection().removeAllRanges();
-        }
-    });
-
     function copyFrom(elem) {
         window.getSelection().removeAllRanges();
         
